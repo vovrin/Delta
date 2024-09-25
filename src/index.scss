@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li,ul{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'assets/styles/fonts/fonts';
