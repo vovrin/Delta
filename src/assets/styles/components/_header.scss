@@ -1,6 +1,5 @@
 header{
     width: 100%;
-    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +16,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100%;
+        position: relative;
         .headerLogoWrapper{
             .headerLogo{
                 width: 168px;
@@ -27,9 +26,22 @@ header{
         nav{
             display: flex;
             align-items: center;
-            height: 100%;
             justify-content: space-between;
             width: 50%;
+            height: 100%;
+            ul{
+                display: flex;
+                
+                li{
+                    a{ 
+                        padding: 17px;
+                        display: block;
+                        &:hover{
+                            background-color: #00000083;
+                        }
+                    }
+                }
+            }
             
         }
     }
