@@ -19,8 +19,11 @@ html,body{
 .wrapper {
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import 'assets/styles/fonts/fonts';
+@import './assets/styles/var/var'

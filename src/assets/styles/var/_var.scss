@@ -1,0 +1,18 @@
+$purple-butt:#D952FC;
+@mixin button_1($bgcolor, $borderc, $color){
+    width: 209px;
+    height: 57px;
+    border-radius: 50px;
+    background-color: $bgcolor;
+    border: 1px solid $borderc;
+    color: $color;
+    transition: all .3s;
+    &:hover{
+        box-shadow: 0px 5px 10px rgba(78, 73, 73, 0.621);
+        transform: translateY(-5px)
+    }
+    &:active{
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
