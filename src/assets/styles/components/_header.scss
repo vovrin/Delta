@@ -36,6 +36,7 @@ header{
                     a{ 
                         padding: 17px;
                         display: block;
+                        transition: all .3s;
                         &:hover{
                             background-color: #00000083;
                         }
