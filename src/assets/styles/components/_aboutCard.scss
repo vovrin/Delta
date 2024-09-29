@@ -1,10 +1,9 @@
-.aboutCont{
-    margin-bottom: 100pxnpm;
-    padding-top: 300px;   
+.aboutCont{  
     .cardsAb{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 86px 268px;
+        gap: 26px;
         .Card1{
             grid-column-start: 1;
             grid-column-end: 5;
