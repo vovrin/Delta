@@ -1,1 +1,78 @@
-@import "../components/header", "../components/section", "../components/aboutCard", "../components/swiperHome";
+@import "../components/header", "../components/section", "../components/aboutCard", "../components/swiperHome", "../components/footerHome";
+.useGuideHome{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../imgs/Background_screen_4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    div{
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        justify-content: center;
+        ul{
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li{
+                list-style-type: decimal;
+            }
+            
+        }
+    }
+}
+.tarrifs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 50px;
+    grid-template-rows: 50px 650px;
+    .logoTarrifAb{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    [class$="Tarrif"]{
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 330px;
+        height: 650px;
+        box-shadow: 0 0 14px rgba(130, 130, 130, 0.782);
+        .addonsCard{
+            padding: 10px;
+            height: 100%;
+            ul{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+        [class$="Header"]{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 278px;
+            
+        }
+        .purpHeader{
+            background: linear-gradient(150deg,#F080FF, #E100FF);
+        }
+        .pinkHeader{
+            background: linear-gradient(150deg,#FF4ECA, #C9008D);
+        }
+        .redHeader{
+            background: linear-gradient(150deg,#FF2E62, #DB083D);
+        }
+    }
+}
