@@ -1,4 +1,22 @@
 @import "../components/header", "../components/section", "../components/aboutCard", "../components/swiperHome", "../components/footerHome";
+@font-face {
+    font-family: 'Conthrax';
+    src: url("../fonts/175-font.otf") format("opentype");
+}
+@font-face {
+    font-family: "MariupolM";
+    src: url("../fonts//OTF/Mariupol-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "MariupolN";
+    src: url("../fonts//OTF/Mariupol-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "FixelTextI";
+    src: url("../fonts/FixelText-BoldItalic.otf") format("opentype");
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 .useGuideHome{
     width: 100%;
     height: 100vh;
@@ -7,6 +25,13 @@
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    .wrapper{
+        p{
+            font-family: "Conthrax";
+            font-size: 50px;
+            font-weight: 600;
+        }
+    }
     div{
         font-size: 24px;
         font-weight: 600;
@@ -20,59 +45,139 @@
 
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 35px;
             li{
                 list-style-type: decimal;
+                font-family: 'MariupolN';
+                font-weight: 400;
+                font-size: 35px;
             }
             
         }
     }
 }
-.tarrifs{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px 50px;
-    grid-template-rows: 50px 650px;
-    .logoTarrifAb{
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-    
-    [class$="Tarrif"]{
-        border-radius: 10px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 330px;
-        height: 650px;
-        box-shadow: 0 0 14px rgba(130, 130, 130, 0.782);
-        .addonsCard{
-            padding: 10px;
+.tarrifsCont{
+    height: 100vh;
+    .tarrifs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 50px;
+        grid-template-rows: 100px 533px;
+        width: 100%;
+        .logoTarrifAb{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: center;
+            font-family: 'Conthrax';
+            font-weight: 600;
+            font-size: 75px;
+        }
+        
+        [class$="Tarrif"]{
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 330px;
             height: 100%;
-            ul{
+            box-shadow: 0 0 14px rgba(130, 130, 130, 0.782);
+            .addonsCard{
+                padding: 15px;
                 height: 100%;
+                ul{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        font-family: "FixelTextI";
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+                }
+            }
+            [class$="Header"]{
+                padding: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                height: 278px;
+                span{
+                    p{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 600;
+                        font-size: 15px;
+                        color: white;
+                    }
+                    h1{
+                        font-family: 'Roboto';
+                        font-weight: 800;
+                        font-size: 35px;
+                        color: white;
+                    }
+                }
+                p{
+                    font-family: 'FixelTextI';
+                    font-weight: 700;
+                    font-size: 19px;
+                    color: white;
+                }
+                
+            }
+            .purpHeader{
+                background: linear-gradient(150deg,#F080FF, #E100FF);
+              
+            }
+            .pinkHeader{
+                background: linear-gradient(150deg,#FF4ECA, #C9008D);
+            }
+            .redHeader{
+                background: linear-gradient(150deg,#FF2E62, #DB083D);
             }
         }
-        [class$="Header"]{
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 278px;
-            
-        }
-        .purpHeader{
-            background: linear-gradient(150deg,#F080FF, #E100FF);
-        }
-        .pinkHeader{
-            background: linear-gradient(150deg,#FF4ECA, #C9008D);
-        }
-        .redHeader{
-            background: linear-gradient(150deg,#FF2E62, #DB083D);
+    }
+}
+
+.mapCont{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    p{
+        font-family: 'Conthrax';
+        font-weight: 600;
+        font-size: 75px;
+    }
+    img{
+        border-bottom: 5px solid #E174FF;
+        border-top: 5px solid #E174FF;
+    }
+}
+.readMoreTarifBtnCont{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 17px;
+    .readMoreTarifBtn{
+        border: 2px solid #E174FF;
+        width: 436px;
+        height: 57px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #E174FF;
+        font-family: 'Conthrax';
+        font-size: 16px;
+        transition: all .2s;
+        
+        box-shadow: 0 0 15px rgba(162, 156, 156, 0.918);
+        &:hover{
+            box-shadow: none;
+            transform: scale(0.97);
+    
         }
     }
 }

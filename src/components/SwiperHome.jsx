@@ -15,7 +15,7 @@ export default function SwiperHome(){
   };
     return(
       <div className='wrapper swiperHomeCont'>
-        <p>Наші автомобілі</p>
+        <p className='ourCarsH1'>Наші автомобілі</p>
         <button className='allCarsBtn'>Всі автомобілі</button>
         <Swiper
         // install Swiper modules
