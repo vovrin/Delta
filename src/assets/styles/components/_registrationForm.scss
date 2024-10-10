@@ -1,0 +1,64 @@
+.firstStepRegForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    justify-content: center;
+    .nameAndSurnameCont{
+        display: flex;
+        gap: 20px;
+    }
+    .nameOfUser, .surNameOfUser, .middleNameOfUser{
+        width: 169px;
+        height: 35px;
+        border: 2px solid #D952FC;
+    }
+    .addUserDoc{
+        display: none;
+    }
+    .numOfTel{
+        width: 338px;
+        height: 35px;
+        border: 2px solid #D952FC;
+        padding-left: 10px;
+    }
+    .nextStepRegButCont{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        .nextStepRegBut{
+            width: 130px;
+            height: 45px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+            &:hover{
+                transform: scale(0.96);
+                box-shadow: none;
+            }
+            
+        }
+    }
+    
+    .fileLabel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:15px;
+        .addUserDocBtn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 366px;
+            border: 2px solid #D952FC;
+            img{
+                padding-left: 15px;
+            }
+        }
+    }
+    
+}

@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DeltaImg from "../assets/imgs/Delta.svg";
+import Registration from "../pages/Registration/Registration";
 export default function Header(){
     return(
         <header>
@@ -13,7 +15,7 @@ export default function Header(){
                         <li><a href="">Контакти</a></li>
                     </ul>
                     <ul>
-                        <li><a href="">Увійти</a></li>
+                        <li><Link to="/reg">Увійти</Link></li>
                         <li><a href="">UA</a></li>
                     </ul>
                 </nav>
