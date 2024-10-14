@@ -1,12 +1,14 @@
 import Header from "../../components/Header";
 import FooterHome from "../../components/FooterHome";
-import RegistrationForm from "../../components/RegistrationForm";
+import LogInForm1 from "../../components/LogInFrom1";
 import "../../assets/styles/pages/Registration.scss";
-export default function Registration(){
+export default function LogIn1(){
     return(
         <>
             <Header></Header>
-            <RegistrationForm></RegistrationForm>
+                <div className="regFormCont wrapper">
+                    <LogInForm1></LogInForm1>
+                </div>
             <FooterHome></FooterHome>
         </>
     )

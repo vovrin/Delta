@@ -1,20 +1,25 @@
-import { createHashRouter,createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Routes, HashRouter } from "react-router-dom"
-import Home from "./pages/Home/Home"
-import Registration from "./pages/Registration/Registration";
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>
-  },
-  {
-    path:"/reg",
-    element:<Registration/>
-  }
-]);
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LogIn from "./pages/Registration/LogIn";
+import LogIn1 from "./pages/Registration/LogIn1";
+import SignIn from "./pages/Registration/SignIn";
+import Profile from "./pages/Profile/Profile";
+import ProtectedRoutes from "./utils/ProtectedeRoutes";
+import Home from "./pages/Home/Home";
 function App() {
-  return <RouterProvider router={router}/>
+  return(
+    <BrowserRouter>
+      <Routes>
+      <Route element={<LogIn/>}  path="/log"/>
+      <Route element={<SignIn/>}  path="/sign"/>
+      <Route element={<LogIn1/>} path="/log1"/>
+        <Route element={<ProtectedRoutes/>}>
+          <Route element={<Profile/>}  path="/prof"/>
+          <Route element={<Home/>}  path="/"/>
+        </Route>
+        
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App

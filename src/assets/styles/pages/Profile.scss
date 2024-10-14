@@ -1,0 +1,34 @@
+.usrRoadInf{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px;
+    .ratingCont{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .shortAb{
+        display: flex;
+        flex-direction: row;
+    }
+    .roadsButts{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+        align-items: left;
+        align-self: left;
+        button{
+            color: white;
+            width: 397px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: #D952FC;
+            box-shadow: 0 0 5px grey;
+            transition: all .2s;
+            &:hover{
+                box-shadow: none;
+                transform: scale(0.97);
+            }
+        }
+    }
+}

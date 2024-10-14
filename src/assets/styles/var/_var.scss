@@ -14,3 +14,11 @@ $purple-butt2:#E174FF;
         box-shadow: none;
     }
 }
+@mixin reg_input_1($borderColor, $height, $width){
+    height: $height;
+    width: $width;
+    border: 2px solid $borderColor;
+    &:focus{
+        outline: none;
+    }
+}

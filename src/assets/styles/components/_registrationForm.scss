@@ -1,31 +1,119 @@
-.firstStepRegForm{
-    display: flex;
-    flex-direction: column;
+@import "../var/var";
+.secondStepRegForm{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 7;
     gap: 20px;
-    height: 100vh;
+    height: 587px;
+    width: 100%;
     justify-content: center;
     .nameAndSurnameCont{
         display: flex;
         gap: 20px;
     }
     .nameOfUser, .surNameOfUser, .middleNameOfUser{
-        width: 169px;
-        height: 35px;
-        border: 2px solid #D952FC;
+        @include reg_input_1(#D952FC, 35px, 169px);
+        padding-left: 10px;
+        
     }
     .addUserDoc{
         display: none;
     }
     .numOfTel{
-        width: 338px;
-        height: 35px;
-        border: 2px solid #D952FC;
+        @include reg_input_1(#D952FC, 35px, 338px);
         padding-left: 10px;
     }
-    .nextStepRegButCont{
+    
+    
+    .fileLabel{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:15px;
+        .uploadedImg{
+            height: 150px;
+        }
+        .addUserDocBtn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 366px;
+            border: 2px solid #D952FC;
+            img{
+                padding-left: 15px;
+            }
+        }
+    }
+    .birthDate{
+        @include reg_input_1(#D952FC, 35px, 169px);
+        padding: 5px;
+    }
+   
+    .lblForInp{
+        text-align: right;
+    }
+}
+.signInForm{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 4;
+    gap: 20px;
+    width: 60%;
+    .lblForInp{
+        text-align: right;
+    }
+    .emailAddress, .passwordOfUser, .confirmPasswordOfUser{
+        @include reg_input_1(#D952FC, 35px, 338px);
+        padding-left: 10px;
+    }
+    .lablOfCheckBox{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-items: center;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        .agreeCheckBox{
+            
+        }
+    }
+    .lblForGoogle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        .googleAuthBtn{
+            width: 338px;
+            height: 35px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+          
+            
+        }
+    }
+    .signInLogInCont{
+        grid-column-start: 1;
+        grid-column-end: 3;
         display: flex;
         width: 100%;
-        justify-content: end;
+        align-items: center;
+        justify-content: space-between;
+        
+        .changeFormToLogIn{
+            text-decoration: underline;
+            cursor: pointer;
+        }
         .nextStepRegBut{
             width: 130px;
             height: 45px;
@@ -41,24 +129,77 @@
             
         }
     }
-    
-    .fileLabel{
-        display: flex;
-        flex-direction: column;
+}
+.logInForm{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 5;
+    gap: 20px;
+    width: 60%;
+    .lblForInp{
+        text-align: right;
+    }
+    .emailAddress, .passwordOfUser, .confirmPasswordOfUser{
+        @include reg_input_1(#D952FC, 35px, 338px);
+        padding-left: 10px;
+    }
+    .lablOfCheckBox{
+        grid-column-start: 1;
+        grid-column-end: 3;
         align-items: center;
-        gap:15px;
-        .addUserDocBtn{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            height: 35px;
-            width: 366px;
-            border: 2px solid #D952FC;
-            img{
-                padding-left: 15px;
-            }
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        .agreeCheckBox{
+            
         }
     }
-    
+    .lblForGoogle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        .googleAuthBtn{
+            width: 338px;
+            height: 35px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+          
+            
+        }
+    }
+    .signInLogInCont{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        
+        .changeFormToSignIn{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .createUserBt{
+            width: 130px;
+            height: 45px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+            &:hover{
+                transform: scale(0.96);
+                box-shadow: none;
+            }
+            
+        }
+    }
 }

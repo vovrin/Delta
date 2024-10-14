@@ -7,7 +7,10 @@ import SwiperHome from "../../components/SwiperHome";
 import MapHome from "../../components/MapHome";
 import Strilka from "../../assets/imgs/arrow-block-right.png"
 import {APIProvider} from '@vis.gl/react-google-maps';
+import { isAuth } from "../../hooks/isAuth";
 export default function Home(){
+    console.log(isAuth())
+    
     return(
         <>
         <Header></Header>
