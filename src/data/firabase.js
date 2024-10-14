@@ -9,7 +9,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD3n9A6dv-ZIK-3yHNAWBE9iCpJhY-3cy8",
+  apiKey: API_KEY,
   authDomain: "cargo-20c2e.firebaseapp.com",
   projectId: "cargo-20c2e",
   storageBucket: "cargo-20c2e.appspot.com",
