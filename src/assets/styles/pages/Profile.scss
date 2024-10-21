@@ -1,20 +1,35 @@
 .usrRoadInf{
+    padding-top: 50px;
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: 200px 200px;
     .ratingCont{
         grid-row-start: 1;
         grid-row-end: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .reit{
+            height: 367px;
+            width: 367px;
+        }
     }
     .shortAb{
         display: flex;
         flex-direction: row;
+        gap: 20px;
+        .profPict{
+            height: 137px;
+        }
     }
     .roadsButts{
         display: flex;
         flex-direction: column;
         justify-content: start;
-        gap: 10px;
+        gap: 30px;
         align-items: left;
         align-self: left;
         button{
@@ -30,5 +45,21 @@
                 transform: scale(0.97);
             }
         }
+    }
+    
+}
+.infAbUser{
+    width: 100%;
+    height: 100vh;
+    
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6;
+        gap: 30px;
+        label{
+            text-align: right;
+        }
+        
     }
 }

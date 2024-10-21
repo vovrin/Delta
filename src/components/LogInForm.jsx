@@ -76,7 +76,7 @@ export default function LogInForm(){
             <img src={file} alt=""  className="uploadedImg"/>
             </label>
             
-            <div className="nextStepRegButCont"><button className="nextStepRegBut">Далі</button> <Link to="/prof">До дому</Link></div>
+            <div className="nextStepRegButCont"><button className="createGlobUserBt">Створити</button> <Link to="/prof">До дому</Link></div>
             
         </form>
         

@@ -47,6 +47,19 @@
                 padding-left: 15px;
             }
         }
+        .createGlobUserBt{
+            width: 130px;
+            height: 45px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+            &:hover{
+                transform: scale(0.96);
+                box-shadow: none;
+            }
+        }
     }
     .birthDate{
         @include reg_input_1(#D952FC, 35px, 169px);

@@ -38,7 +38,7 @@ export default function GoogleAuth(){
                     uid:state.user.uid,
                     email:state.user.email
                 }))
-                history("/log")
+                navigate("/log")
             }
     })
     }

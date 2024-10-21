@@ -12,9 +12,10 @@ function App() {
       <Route element={<LogIn/>}  path="/log"/>
       <Route element={<SignIn/>}  path="/sign"/>
       <Route element={<LogIn1/>} path="/log1"/>
+      <Route element={<Home/>}  path="/"/>
         <Route element={<ProtectedRoutes/>}>
           <Route element={<Profile/>}  path="/prof"/>
-          <Route element={<Home/>}  path="/"/>
+          
         </Route>
         
       </Routes>

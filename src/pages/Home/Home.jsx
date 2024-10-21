@@ -8,8 +8,11 @@ import MapHome from "../../components/MapHome";
 import Strilka from "../../assets/imgs/arrow-block-right.png"
 import {APIProvider} from '@vis.gl/react-google-maps';
 import { isAuth } from "../../hooks/isAuth";
+import { getDocs, doc } from "firebase/firestore";
+import { db } from "../../data/firabase";
+import { useSelector } from "react-redux";
 export default function Home(){
-    console.log(isAuth())
+
     
     return(
         <>
