@@ -18,9 +18,9 @@ export default function SignInForm(){
         signInWithEmailAndPassword(auth, em, pas).then(async (em)=>{
             
             const refToInf = doc(db, "users", em.user.uid);
-            const date = await getDoc(refToInf);
-            const inf = date.data()
-            if (date.exists()){
+            const data = await getDoc(refToInf);
+            const inf = data.data()
+            if (data.exists()){
                 dispatch(contSlice.setUser({
                     uid:em.user.uid,
                     email:em.user.email
@@ -54,9 +54,7 @@ export default function SignInForm(){
             <label htmlFor=""  className="lblForInp">Електронна адреса</label>
             <input type="email" ref={email} className="emailAddress" name="useEmail" required/>
             <label htmlFor="" className="lblForInp">Пароль</label>
-            <input type="password" ref={password}  className="passwordOfUser"/>
-            <label htmlFor="" className="lablOfCheckBox">Я погоджуюс з політикою конфіденсійності компанії Delta <input type="checkbox" className="agreeCheckBox" name="agree"/></label>
-            
+            <input type="password" ref={password}  className="passwordOfUser"/>           
             <div className="signInLogInCont"><p>Ще не зареєструвались? <Link to="/log1" className="changeFormToLogIn">Зареєструватися</Link></p><button className="nextStepRegBut">Увійти</button></div>
         </form>
     )

@@ -1,53 +1,87 @@
+@import "../var/var";
 header{
     width: 100%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     left: 0;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    @include text_style_1("MariupolM", 400, 19px);
     color: #000;
     background-color: white;
     z-index: 100;
     box-shadow: 0 0 10px rgb(159, 159, 159);
-    .wrapper{
+    .hdr{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         .headerLogoWrapper{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .headerLogo{
-                width: 168px;
-                height: 43px;
+                width: 135px;
+                height: 22px;
             }
         }
-        nav{
+        .navCont{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 50%;
+            width: 60%;
             height: 100%;
-            ul{
+            .navSSect{
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                .imgLink{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
+                    cursor: pointer;
                 
-                li{
-                    .imgLink{
-                        cursor: pointer;
-                        padding: 11.5px;
-                        .profPictH{
-                        border-radius: 100%;
+                    padding: 17.5px;
+                   
+                    .profPictH{
+                    border-radius: 100%;
+                    height: 35px;
+                    width: 35px;
+                    }
+                    .textProfImg{
+                        width: 35px;
                         height: 35px;
+                        background-color: #8448F1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 30px;
                     }
-                    }
-                    
-                       
-                    
-                    
+                }
+                li{
                     a{ 
-                        padding: 17px;
+                        padding: 21px;
+                        display: block;
+                        transition: all .3s;
+                        &:hover{
+                            background-color: #00000083;
+                        }
+                    }
+                }
+                
+            }
+            .navFSect{
+                display: flex;
+                li{
+                    cursor: pointer;
+                    a{ 
+                        padding: 21px;
                         display: block;
                         transition: all .3s;
                         &:hover{

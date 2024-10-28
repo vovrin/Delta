@@ -2,11 +2,17 @@
 .secondStepRegForm{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 7;
-    gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
     height: 587px;
     width: 100%;
     justify-content: center;
+    .previewButt{
+        width: 130px;
+        height: 35px;
+        background-color: #D952FC;
+        color: white;
+    }
     .nameAndSurnameCont{
         display: flex;
         gap: 20px;
@@ -31,6 +37,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap:15px;
         .uploadedImg{
             height: 150px;
@@ -68,6 +75,27 @@
    
     .lblForInp{
         text-align: right;
+    }
+    .nextStepRegButCont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        .createGlobUserBt{
+            width: 130px;
+            height: 45px;
+            background-color: #D952FC;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
+            transition: all .3s;
+            &:hover{
+                transform: scale(0.96);
+                box-shadow: none;
+            }
+        }
     }
 }
 .signInForm{
@@ -214,5 +242,6 @@
             }
             
         }
+      
     }
 }

@@ -3,8 +3,6 @@ import { auth, googleProvider } from "../data/firabase";
 import { setPersistence } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { contSlice } from "../data/data";
-import { useSelector } from "react-redux";
-import { redirect } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../data/firabase";
 import { useNavigate } from "react-router-dom";

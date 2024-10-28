@@ -5,7 +5,11 @@ import SignIn from "./pages/Registration/SignIn";
 import Profile from "./pages/Profile/Profile";
 import ProtectedRoutes from "./utils/ProtectedeRoutes";
 import Home from "./pages/Home/Home";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import { isAuth } from "./hooks/isAuth";
+import { useEffect } from "react";
 function App() {
+  
   return(
     <BrowserRouter>
       <Routes>
@@ -13,6 +17,7 @@ function App() {
       <Route element={<SignIn/>}  path="/sign"/>
       <Route element={<LogIn1/>} path="/log1"/>
       <Route element={<Home/>}  path="/"/>
+      <Route element={<AboutUs/>} path="/aboutUs"/>
         <Route element={<ProtectedRoutes/>}>
           <Route element={<Profile/>}  path="/prof"/>
           

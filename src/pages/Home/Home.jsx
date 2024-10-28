@@ -13,7 +13,7 @@ import { db } from "../../data/firabase";
 import { useSelector } from "react-redux";
 export default function Home(){
 
-    
+    isAuth();
     return(
         <>
         <Header></Header>

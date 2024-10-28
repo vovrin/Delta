@@ -1,0 +1,151 @@
+
+@font-face {
+    font-family: "MariupolM";
+    src: url("../fonts//OTF/Mariupol-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "MariupolN";
+    src: url("../fonts//OTF/Mariupol-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "FixelTextI";
+    src: url("../fonts/FixelText-BoldItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: "FixelTextV";
+    src: url("../fonts/FixelVariable.ttf") format("truetype");
+}
+.infoWrapper{
+    display: flex;
+    flex-direction: column;
+    
+    background-repeat: no-repeat;
+    background:linear-gradient(#CF69C3, #E252FC, #CC3FF7, #C536F4, #BE2DF1) fixed;
+}
+.aboutInfoCont{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    .about1{
+        margin-top: 30px;
+        font-family: "Conthrax";
+        font-size: 72px;
+        color: white;
+    }
+    .whatIsDeltaCont{
+        width: 100%;
+       
+        background-color: white;
+        border-radius: 50px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 4fr;
+        p{
+            font-family: "FixelTextV";
+            font-weight: 700;
+            font-size: 52px;
+            .delta1{
+                font-family: "Conthrax";
+                font-size: 52px;
+                font-weight: 600;
+            }
+            
+        }
+        span{
+            
+            
+            font-family: "FixelTextV";
+        
+            font-size: 34px;
+           
+            span{
+                font-family: 'Conthrax';
+                font-weight: 600;
+                font-size: 40px;
+            }
+        }
+        img{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            align-self: center;
+            align-items: center;
+        }
+    }
+    .deltaPruproseCont{
+        width: 100%;
+        
+        background-color: white;
+        border-radius: 50px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 4fr;
+        img{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            align-self: center;
+            align-items: center;
+        }
+        p{
+            font-family: "FixelTextV";
+            font-weight: 700;
+            font-size: 52px;
+        }
+        span{
+            
+            
+            font-family: "FixelTextV";
+            font-weight: 400;
+            font-size: 34px;
+           
+            span{
+                font-family: 'FixelTextV';
+                font-weight: 600;
+                font-size: 34px;
+            }
+        }
+    }
+    .ourServicesCont{
+        width: 100%;
+        background-color: white;
+        border-radius: 50px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        img{
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            align-self: center;
+            align-items: center;
+        }
+        p{
+            font-family: "FixelTextV";
+            font-weight: 700;
+            font-size: 52px;
+        }
+        span{
+            
+            
+            font-family: "FixelTextV";
+            font-weight: 400;
+            font-size: 34px;
+           
+            span{
+                font-family: 'FixelTextV';
+                font-weight: 600;
+                font-size: 34px;
+            }
+        }
+    }
+}

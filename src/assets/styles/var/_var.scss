@@ -1,5 +1,22 @@
 $purple-butt:#D952FC;
 $purple-butt2:#E174FF;
+@font-face {
+    font-family: 'Conthrax';
+    src: url("../fonts/conthrax-sb.otf") format("opentype");
+}
+@font-face {
+    font-family: "MariupolM";
+    src: url("../fonts//OTF/Mariupol-Medium.otf") format("opentype");
+}
+
+@font-face{
+    font-family: "FixelM";
+    src: url("../fonts/FixelText-Medium.otf") format("opentype");
+}
+@font-face{
+    font-family: "FixelMI";
+    src: url("../fonts/FixelText-MediumItalic.otf") format("opentype");
+}
 @mixin button_1($bgcolor, $borderc, $color){
     width: 209px;
     height: 57px;
@@ -14,6 +31,12 @@ $purple-butt2:#E174FF;
         box-shadow: none;
     }
 }
+@mixin button_2($bgcolor, $borderR, $width, $height){
+    width: $width;
+    height: $height;
+    border-radius: $borderR;
+    background-color: $bgcolor;
+}
 @mixin reg_input_1($borderColor, $height, $width){
     height: $height;
     width: $width;
@@ -21,4 +44,9 @@ $purple-butt2:#E174FF;
     &:focus{
         outline: none;
     }
+}
+@mixin text_style_1($fontFamily, $fontWeight, $fontSize){
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
 }

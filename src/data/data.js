@@ -17,7 +17,7 @@ const counterSlice = createSlice({
     reducers:{
         setUserGlobInf(state, action){
             state.name = action.payload.name;
-            state.surName = action.payload.surname;
+            state.surName = action.payload.surName;
             state.middleName = action.payload.middleName;
             state.phoneNumb = action.payload.phoneNumb;
             state.dateOfBirth = action.payload.dateOfBirth;

@@ -6,7 +6,9 @@ import { useEffect } from "react";
 import { getDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../data/firabase";
 import { useSelector } from "react-redux";
+import { isAuth } from "../../hooks/isAuth";
 export default function Profile(){
+    isAuth();
     const user = useSelector(state=>state.user)
     console.log(user)
     return(
@@ -18,7 +20,7 @@ export default function Profile(){
                 <p>Ваш рейтинг поїздок</p>
             </div>
             <div className="shortAb">
-                <img src={user.profPict} alt="photo" className="profPict"/>
+                <div className="profPict">Ваше фото</div>
                 <p>{user.name} {user.surName} {user.middleName}</p>
             </div>
             <div className="roadsButts">
@@ -27,10 +29,11 @@ export default function Profile(){
                 <button>Пресети</button>
             </div>
         </section>
+        
         <section className="infAbUser wrapper">
-            <p>Інформація</p>
-            <div>
-                <label htmlFor="">Імя</label>
+            <p className="infTxtCont1">Інформація</p>
+            <div className="initInfCont">
+                <label htmlFor="">Ім'я</label>
                 <p>{user.name}</p>
                 <label htmlFor="">Прізвище</label>
                 <p>{user.surName}</p>
@@ -40,7 +43,21 @@ export default function Profile(){
                 <p>{user.phoneNumb}</p>
                 <label htmlFor="">Електронна пошта</label>
                 <p>{user.email}</p>
-                <button>Оновити</button>
+                <div><button className="updateButProf">Оновити</button></div>
+                
+            </div>
+        </section>
+        <section className="useDocCont wrapper">
+            <div className="useDoc">
+                <div>
+                    <img src="" alt="" />
+                </div>
+                <div>
+                    <label htmlFor="">Додано</label>
+                    <p>31.02.2000</p>
+                    <label htmlFor="">Оновлено</label>
+                    <p>07.03.2023</p>
+                </div>
             </div>
         </section>
         <FooterHome></FooterHome>
