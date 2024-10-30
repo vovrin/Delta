@@ -1,20 +1,20 @@
-
 import { getAuth } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { db } from "../data/firabase";
 import { doc, getDoc } from "firebase/firestore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { contSlice } from "../data/data";
-import { useNavigate } from "react-router-dom";
-export function isAuth(){
-    const navigate = useNavigate()
-    const auth = getAuth();
-    const dispatch = useDispatch()
+export function setAuth(){
+    
+    console.log("good")
+    const dispatch = useDispatch();
     useEffect(()=>{
-        const onAuth = onAuthStateChanged(auth, async user=>{
+        const auth = getAuth();
+        const setA = onAuthStateChanged(auth, async user=>{
+            
             if(user){
-                console.log(user);
+                console.log("good1")
                 const refToInf = doc(db, "users", user.uid);
                 const data = await getDoc(refToInf);
                 const inf = data.data();
@@ -44,6 +44,7 @@ export function isAuth(){
             }
 
         })
-        return ()=>onAuth()
+        return ()=>setA()
     },[])
+    return {}
 }

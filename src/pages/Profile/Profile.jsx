@@ -6,9 +6,9 @@ import { useEffect } from "react";
 import { getDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../data/firabase";
 import { useSelector } from "react-redux";
-import { isAuth } from "../../hooks/isAuth";
+import { setAuth } from "../../hooks/setAuth";
 export default function Profile(){
-    isAuth();
+    
     const user = useSelector(state=>state.user)
     console.log(user)
     return(

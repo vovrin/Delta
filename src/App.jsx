@@ -6,7 +6,6 @@ import Profile from "./pages/Profile/Profile";
 import ProtectedRoutes from "./utils/ProtectedeRoutes";
 import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import { isAuth } from "./hooks/isAuth";
 import { useEffect } from "react";
 function App() {
   
