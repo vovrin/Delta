@@ -6,7 +6,7 @@ import FooterHome from "../../components/FooterHome";
 import SwiperHome from "../../components/SwiperHome";
 import MapHome from "../../components/MapHome";
 import Strilka from "../../assets/imgs/arrow-block-right.png"
-import { setAuth } from "../../hooks/setAuth";
+
 import {APIProvider} from '@vis.gl/react-google-maps';
 import { getDocs, doc } from "firebase/firestore";
 import { getDoc } from "firebase/firestore";

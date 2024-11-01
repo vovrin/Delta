@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DeltaImg from "../assets/imgs/Delta.svg";
 import { useSelector } from "react-redux";
-import { isAuth2 } from "../hooks/isAuth2";
-import { setAuth } from "../hooks/setAuth";
+import { useSetAuthState } from "../hooks/useSetAuthState";
+
 import { useNavigate } from "react-router-dom";
 
 export default function Header(){
-    setAuth()
-    const isAut = isAuth2();
-    console.log(isAut)
+    const {isLoading} = useSetAuthState()
     let iconH;
-    const user = useSelector(state=>state.user)
-    if(isAut.userInf == true){
+    const user = useSelector(state=>state.user);
+    if (isLoading == true){
+        iconH =  iconH = <Link to="/sign">Увійти</Link>
+    }else if(user.surName != undefined){
         if(user.profPict != null){
             iconH = <a onClick={()=>navigate("/prof")} className="imgLink"><img className="profPictH" onClick={()=>navigate("/prof")} src={user.profPict}/><div className="nameContH">{user.name}</div></a>
         }else{

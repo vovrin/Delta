@@ -22,16 +22,16 @@ export default function LogInForm(){
     const addFiles = useRef();
     const currYear = new Date().getFullYear();
     const currDay = new Date().getDate();
-    const currMonth = new Date().getMonth();
+    const currMonth = new Date().getMonth() + 1;
     const currMonthM = ()=>{
         if(currMonth<10){
             return "0"+currMonth;
         }else{
-            return currMonth
+            return currMonth;
         }
     }
     
-    const validDate = currYear-18+"-"+currMonthM()+"-"+currDay;
+    const validDate = currYear-18+"-"+currMonthM() + "-"+currDay;
     console.log("month"+ currDay)
     const addFilesClick = ()=>{
         addFiles.current.click();
