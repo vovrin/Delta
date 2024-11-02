@@ -6,9 +6,9 @@ export default function ProtectedRoutes(){
     const user = useSelector(state=>state.user)
     if(isLoading == true){
         console.log("loading");
-    }else if(isLoading == false && user.surName != undefined){
+    }else if(isLoading == false && user.surName != null){
         return <Outlet/>
     }else{
-        <Navigate to="/sign"/>
+        return <Navigate to="/sign"/>
     }
 }

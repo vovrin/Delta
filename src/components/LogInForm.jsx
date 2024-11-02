@@ -23,6 +23,13 @@ export default function LogInForm(){
     const currYear = new Date().getFullYear();
     const currDay = new Date().getDate();
     const currMonth = new Date().getMonth() + 1;
+    const currDayM = ()=>{
+        if(currDay<10){
+            return "0"+currDay;
+        }else{
+            return currDay;
+        }
+    }
     const currMonthM = ()=>{
         if(currMonth<10){
             return "0"+currMonth;
@@ -31,7 +38,7 @@ export default function LogInForm(){
         }
     }
     
-    const validDate = currYear-18+"-"+currMonthM() + "-"+currDay;
+    const validDate = currYear-18+"-"+currMonthM() + "-"+currDayM();
     console.log("month"+ currDay)
     const addFilesClick = ()=>{
         addFiles.current.click();
@@ -39,9 +46,6 @@ export default function LogInForm(){
     const changeFile = ()=>{
         console.log(addFiles.current.files)
         setFile(URL.createObjectURL(addFiles.current.files[0]))
-    }
-    function ch(){
-        console.log("yes")
     }
     const onSubmit = async(d)=>{
         const docc = doc(db, "users", user.uid);

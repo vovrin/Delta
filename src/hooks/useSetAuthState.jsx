@@ -7,25 +7,33 @@ import { contSlice } from "../data/data";
 import { useNavigate } from "react-router-dom";
 export function useSetAuthState(){
 
-    const [isLoading, setLoading] = useState(false)
+    const [isLoading, setLoading] = useState(true)
 
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
-
+    
     useEffect(()=>{
-        setLoading(true)
+        console.log("loading seted")
         const auth = getAuth();
+        setLoading(true) 
         const setA = onAuthStateChanged(auth, async user=>{
+            
+            
             if(user){
+                console.log(user)
                 const refToInf = doc(db, "users", user.uid);
                 const data = await getDoc(refToInf);
                 const inf = data.data();
+                if(user.emailVerified == true){
+                    dispatch(contSlice.setAccountVerify())
+                }
                 dispatch(contSlice.setUser({
                     email:user.email,
                     uid:user.uid
                 }))
                 if (data.exists()){
+                    setLoading(false);
                     dispatch(contSlice.setUserGlobInf({
                         name:inf.name,
                         surName:inf.surName,
@@ -44,13 +52,18 @@ export function useSetAuthState(){
                 }else{
                     //navigate("/log");
                     console.log("no prof inf");
+                    setLoading(false);
                 }
             }else{
-
+                setLoading(false);
             }
         })
-        setLoading(false)
-        return ()=>setA()
+        
+        return ()=>{
+            
+            setA();
+            setLoading(false);
+        }
     },[])
     return {
         isLoading

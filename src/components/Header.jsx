@@ -11,7 +11,8 @@ export default function Header(){
     let iconH;
     const user = useSelector(state=>state.user);
     if (isLoading == true){
-        iconH =  iconH = <Link to="/sign">Увійти</Link>
+        console.log("set true")
+        iconH =  iconH = <a>Очікую</a>
     }else if(user.surName != undefined){
         if(user.profPict != null){
             iconH = <a onClick={()=>navigate("/prof")} className="imgLink"><img className="profPictH" onClick={()=>navigate("/prof")} src={user.profPict}/><div className="nameContH">{user.name}</div></a>

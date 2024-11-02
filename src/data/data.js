@@ -9,7 +9,8 @@ const userInfo = {
     phoneNumb:null,
     dateOfBirth:null,
     uid:null,
-    profPict:null
+    profPict:null,
+    isVerified:false
 }
 const counterSlice = createSlice({
     name:'user',
@@ -28,6 +29,9 @@ const counterSlice = createSlice({
         },
         setProfPic(state, action){
             state.profPict = action.payload.profPict;
+        },
+        setAccountVerify(state){
+            state.isVerified = true;
         }
     }
 });
