@@ -1,30 +1,45 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import DeltaImg from "../assets/imgs/Delta.svg";
 import { useSelector } from "react-redux";
 import { useSetAuthState } from "../hooks/useSetAuthState";
-
+import { signOut } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-
+import { useState } from "react";
+import SignInPopPup from "./SignInPopPup";
 export default function Header(){
+    const [isMenu, setMenu] = useState(false)
+    const navigate = useNavigate()
+    function exitF(){
+        const auth = getAuth()
+        
+        signOut(auth).then(()=>{
+            location.reload()
+            
+        })
+    }
     const {isLoading} = useSetAuthState()
     let iconH;
     const user = useSelector(state=>state.user);
     if (isLoading == true){
         console.log("set true")
         iconH =  iconH = <a>Очікую</a>
-    }else if(user.surName != undefined){
-        if(user.profPict != null){
-            iconH = <a onClick={()=>navigate("/prof")} className="imgLink"><img className="profPictH" onClick={()=>navigate("/prof")} src={user.profPict}/><div className="nameContH">{user.name}</div></a>
-        }else{
+    }else if(user.isVerified != false){
+        
 
-            iconH = <a onClick={()=>navigate("/prof")} className="imgLink"><div className="textProfImg" >{user.name.charAt(0)}</div><div>{user.name}</div></a>;
-        }
+            iconH = <a onClick={()=>{
+                setMenu(state=>!state)
+            }} className="imgLink"><div className="textProfImg" >{user.name.charAt(0)}</div><div>{user.name}</div></a>;
+
     }else{
         
-        iconH = <Link to="/sign">Увійти</Link>
+        iconH = <div className="contSignInPop"><button className="signInShowBtn">Увійти</button>
+            <SignInPopPup></SignInPopPup>
+        </div>
+        
     }
-    const navigate = useNavigate()
+    
     return(
         <header>
             <div className="wrapper hdr">
@@ -32,12 +47,19 @@ export default function Header(){
                 <nav className="navCont">
                     <ul className="navFSect">
                         <li><a href="">Регіон</a></li>
-                        <li><a href="">Тарифи</a></li>
+                        <li><a onClick={()=>navigate("/tariffs")}>Тарифи</a></li>
                         <li><a onClick={()=>navigate("/aboutUs")}>Про нас</a></li>
                         <li><a href="">Контакти</a></li>
                     </ul>
                     <ul className="navSSect">
-                        <li>{iconH}</li>
+                        <li>{iconH}{isMenu&&
+                            <div className="menuProf">
+                                <ul>
+                                    <li><button onClick={()=>navigate("/prof")}>Акаунт</button></li>
+                                    <li><button onClick={()=>exitF()}>Вийти</button></li>
+                                </ul>
+                            </div>}
+                        </li>
                         <li><a href="">UA</a></li>
                     </ul>
                 </nav>

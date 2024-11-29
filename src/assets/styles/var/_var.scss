@@ -8,10 +8,22 @@ $purple-butt2:#E174FF;
     font-family: "MariupolM";
     src: url("../fonts//OTF/Mariupol-Medium.otf") format("opentype");
 }
+@font-face {
+    font-family: "MariupolR";
+    src: url("../fonts/OTF/Mariupol-Regular.otf") format("opentype");
+}
 
 @font-face{
     font-family: "FixelM";
     src: url("../fonts/FixelText-Medium.otf") format("opentype");
+}
+@font-face{
+    font-family: "FixelSB";
+    src: url("../fonts/FixelText-SemiBold.otf") format("opentype");
+}
+@font-face{
+    font-family: "FixelR";
+    src: url("../fonts/FixelText-Regular.otf") format("opentype");
 }
 @font-face{
     font-family: "FixelMI";
@@ -25,7 +37,7 @@ $purple-butt2:#E174FF;
     border: 1px solid $borderc;
     color: $color;
     box-shadow: 0px 0px 15px rgba(162, 156, 156, 0.918);
-    transition: all .3s;
+    transition: all .2s;
     &:hover{
         transform: scale(0.96);
         box-shadow: none;
@@ -41,6 +53,7 @@ $purple-butt2:#E174FF;
     height: $height;
     width: $width;
     border: 2px solid $borderColor;
+    padding-left: 10px;
     &:focus{
         outline: none;
     }
@@ -49,4 +62,77 @@ $purple-butt2:#E174FF;
     font-family: $fontFamily;
     font-weight: $fontWeight;
     font-size: $fontSize;
+}
+@mixin button_type_1($width, $height, $rad){
+    width: $width;
+    height: $height;
+    border-radius: $rad;
+    border: 1px solid white;
+    background-color: #D952FC;
+    color: white;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.844);
+    transition: all .2s;
+    &:hover{
+        box-shadow: none;
+        transform: scale(.98);
+        background-color: #AD52FC;
+    }
+    &:active{
+        color: black;
+        border: 1px solid black;
+        background-color: #D3D2CC;
+    }
+    
+}
+@mixin button_type_1d($width, $height, $rad){
+    width: $width;
+    height: $height;
+    border-radius: $rad;
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
+    
+}
+@mixin button_type_2($width, $height, $rad){
+    width: $width;
+    height: $height;
+    border-radius: $rad;
+    border: 1px solid black;
+    background-color: #D952FC;
+    color: black;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.844);
+    transition: all .2s;
+    &:hover{
+        box-shadow: none;
+        transform: scale(.98);
+        background-color: #AD52FC;
+    }
+    &:active{
+        color: black;
+        border: 1px solid black;
+        background-color: #D3D2CC;
+    }
+    
+}
+@mixin button_type_3($width, $height, $rad){
+    width: $width;
+    height: $height;
+    border-radius: $rad;
+    border: 1px solid #D952FC;
+    background-color: white;
+    color: #D952FC;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.844);
+    transition: all .2s;
+    &:hover{
+        box-shadow: none;
+        transform: scale(.98);
+        color: #AD52FC;
+        
+    }
+    &:active{
+        color: black;
+        border: 1px solid black;
+        background-color: #D3D2CC;
+    }
+    
 }

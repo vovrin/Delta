@@ -1,0 +1,18 @@
+@import "../var/var", "../components/swiperTariffs", "../components//tariffTableGen";
+.tariffsBannerCont{
+    width: 100%;
+    height: 50vh;
+    background-image: url("../../imgs/bmwM3Banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        @include text_style_1("Conthrax", 600, 72px);
+        color: white;
+        user-select: none;
+    }
+}

@@ -1,5 +1,7 @@
-import sectImg from "../assets/imgs/First_screen.svg" 
+import sectImg from "../assets/imgs/FirstScreen.png" 
+import { useNavigate } from "react-router-dom"
 export default function Section(){
+    const navigate = useNavigate()
     return(
         <section className="aboutComp">
             <div className="bgAboutCont">
@@ -11,8 +13,8 @@ export default function Section(){
                     <p className="deltaTextH1">DELTA</p>
                     <p className="purposeTextH1">Наша мета - зробити пересування нашим містом простим і доступним кожному. Бери своє улюблене авто і вільно подорожуй Львовом без обмежень</p>
                     <div className="flex flex-row gap-10">
-                        <button className="chooseCar">Обрати Авто</button>
-                        <button className="info">Інформація</button>
+                        <button className="chooseCar" onClick={()=>navigate("/cars")}>Обрати Авто</button>
+                        <button className="info" onClick={()=>navigate("aboutUs")}>Інформація</button>
                     </div>
                 </article>
             </div>

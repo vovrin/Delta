@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.2.8",
     "@vis.gl/react-google-maps": "^1.2.0",
     "firebase": "^10.14.1",
+    "motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",

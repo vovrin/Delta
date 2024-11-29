@@ -48,6 +48,9 @@ export function useSetAuthState(){
                     }else{
                         console.log("no prof pict")
                     }
+                    if(inf.type == "admin"){
+                        dispatch(contSlice.setAddmin())
+                    }
                     
                 }else{
                     //navigate("/log");

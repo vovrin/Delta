@@ -1,0 +1,29 @@
+
+.tarrifColCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    @include text_style_1("FixelM", 400, 33px);
+    .tarrifColor{
+        width: 40px;
+        height: 40px;
+       
+        border-radius: 10px;
+    }
+    .ekCol{
+       
+        background: linear-gradient(#F18FFE,#E100FF);
+        
+    }
+    .stCol{
+    
+        background: linear-gradient(#FF4ECA,#C9008D);
+        
+    }
+    .coCol{
+        background: linear-gradient(#FF2E62,#DB083D);
+        
+    }
+
+}

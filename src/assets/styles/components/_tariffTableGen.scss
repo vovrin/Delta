@@ -1,0 +1,83 @@
+
+.tarrifs{
+    padding: 20px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    width: 100%;
+    .logoTarrifAb{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        font-family: 'Conthrax';
+        font-weight: 600;
+        font-size: 75px;
+    }
+    
+    [class$="Tarrif"]{
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 330px;
+        height: 100%;
+        box-shadow: 0 0 14px rgba(130, 130, 130, 0.782);
+        .addonsCard{
+            padding: 15px;
+            height: 100%;
+            ul{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: "FixelTextI";
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+        }
+        [class$="Header"]{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 278px;
+            span{
+                p{
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: 15px;
+                    color: white;
+                }
+                h1{
+                    font-family: 'Roboto';
+                    font-weight: 800;
+                    font-size: 35px;
+                    color: white;
+                }
+            }
+            p{
+                font-family: 'FixelTextI';
+                font-weight: 700;
+                font-size: 19px;
+                color: white;
+            }
+            
+        }
+        .purpHeader{
+            background: linear-gradient(150deg,#F080FF, #E100FF);
+          
+        }
+        .pinkHeader{
+            background: linear-gradient(150deg,#FF4ECA, #C9008D);
+        }
+        .redHeader{
+            background: linear-gradient(150deg,#FF2E62, #DB083D);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+
+.fonOfPopup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.515);
+    z-index: 100;
+    .popupRegFileCont{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        padding: 20px;
+        p{
+            @include text_style_1("Conthrax", 400, 23px)
+        }
+        input{
+            display: none;
+        }
+        .docContFileReg{
+            width: 500px;
+            height: 292px;
+            .downloadDocBtn{
+                height: 207px;
+                width: 207px;
+                border: 2px solid #D952FC;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        .confirmFileRegCont{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            .confirmFileReg{
+                @include button_type_1(127px, 30px, 20px)
+            }
+        }
+    }
+}

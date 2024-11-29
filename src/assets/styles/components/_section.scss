@@ -31,30 +31,24 @@
                     font-size: 16px;
                 }
                 .deltaTextH1{
-                    font-family: 'Conthrax';
-                    font-weight: 600;
-                    font-size: 128px;
+                    
+                    @include text_style_1("Conthrax", 600,128px);
                 }
                 .purposeTextH1{
-                    font-family: 'Poppins';
-                    font-weight: 400;
-                    font-size: 16px;
+                    @include text_style_1("Poppins", 500,16px);
+                  
                     max-width: 500px;
                 }
                 div {
                     .chooseCar{
-                        @include button_1($purple-butt, white, white);
-                        font-family: 'MariupolM';
-                        font-weight: 500;
-                        font-size: 16px;
+                        @include button_type_1(209px, 57px, 30px);
+                        @include text_style_1("MariupolM", 400,16px)
                        
                     }
 
                     .info{
-                        font-family: 'MariupolM';
-                        font-weight: 500;
-                        font-size: 16px;
-                        @include button_1(#fff, $purple-butt, $purple-butt);
+                        @include button_type_3(209px, 57px, 30px);
+                        @include text_style_1("MariupolM", 400,16px)
                     }
                 }
                 

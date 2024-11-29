@@ -1,0 +1,124 @@
+.aboutAutoPopupBgCont{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.511);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .aboutAutoPopupCont{
+        height: 95vh;
+        width: 80vw;
+        background-color: white;
+        overflow-y: scroll;
+        border-radius: 20px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        flex-direction: column;
+        
+        
+       .clsAboutAutoPopupBtnCont{
+            width: 100%;
+            display: flex;
+            
+           .clsAboutAutoPopupBtn{
+               display: flex;
+               align-items: center;
+               justify-content: center;
+              
+            
+               @include button_type_1(80px, 50px, 20px)
+           }
+
+       }
+        .aboutAutoPopupInfCont{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 30px;
+
+
+
+            .charAboutAutoPopupCont{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                p{
+                    @include text_style_1("FixelSB", 400, 46px);
+
+                }
+                .charAboutAutoPopup{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                   
+                    div{
+                        .greySmallTxt{
+                            @include text_style_1("FixelM", 400, 25px);
+                            color: #555555;
+                        }
+                        p{
+                            @include text_style_1("FixelSB", 400, 35px)
+                        }
+                    }
+                }
+            }
+
+            .makeCallBtnCont{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: center;
+                button{
+                    @include button_type_1(273px, 50px, 20px);
+                    @include text_style_1("FixelSB", 500, 30px)
+                }
+            }
+        
+            .initalAutoCont{
+                width: 100%;
+            
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                
+                div{
+                    p{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 15px;
+                        @include text_style_1("FixelM", 400, 25px);
+                        span{
+                            @include text_style_1("FixelSB", 400, 40px)
+                        }
+                    }
+                }
+                
+                .imgContAuto{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    img{
+                        height: 260px;
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+}

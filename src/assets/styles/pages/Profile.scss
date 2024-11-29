@@ -1,142 +1,239 @@
-
 @import "../var/var";
-.usrRoadInf{
-    
-    padding-top: 50px;
+.profInfCont{
+    padding-top: 20px;
+    width: 100%;
     display: grid;
-    height: 93vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px;
-    position: relative;
-    &::before{
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        
-    }
-    .ratingCont{
-        grid-row-start: 1;
-        grid-row-end: 3;
+    grid-template-columns: 2fr 5fr;
+    gap: 20px;
+    .shortProfInfCont{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        border: 3px solid #999999;
+        border-radius: 20px;
         align-items: center;
-        gap: 30px;
-        .reit{
-            height: 350px;
-            width: 350px;
-        }
-        p{
-            @include text_style_1("Conthrax", 600, 23px);
-            
-        }
-    }
-    .shortAb{
-        display: flex;
-        flex-direction: row;
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         gap: 20px;
-        .profPict{
-            height: 137px;
-            width: 137px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid black;
-            @include text_style_1("MariupolM", 500, 20px);
-            padding: 16px;
-            text-align: center;
-            
-        }
-        p{
-            @include text_style_1("MariupolM", 600, 40px);
-        }
-    }
-    .roadsButts{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        justify-content: end;
-
-        gap: 30px;
-        button{
-            color: white;
-            width: 397px;
-            height: 40px;
-            border-radius: 30px;
-            background-color: #D952FC;
-            box-shadow: 0 0 5px grey;
-            transition: all .2s;
-            @include text_style_1("MariupolM", 500, 30px);
-            &:hover{
-                box-shadow: none;
-                transform: scale(0.97);
+        max-height: 750px;
+        .userPhotRatCont{
+            height: 284px;
+            width: 284px;
+            position: relative;
+            .userBigPhoto{
+                width: 100%;
+                height: 100%;
+            }
+            .userRating{
+                width: 125px;
+                height: 50px;
+                border: 3px solid black;
+                position: absolute;
+                bottom: 20px;
+                background-color: white;
+                right: 0;
+                color: green;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-around;
+                user-select: none;
+                
+                img{
+                    height: 39px;
+                    
+                }
+                p{
+                    color: black;
+                    @include text_style_1("FixelMI", 400, 32px)
+                }
             }
         }
-    }
-    
-}
-.infAbUser{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    position: relative;
-    &::before{
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        position: absolute;
-        bottom: 1px;
-        left: 0;
-        
-    }
-    .infTxtCont1{
-        @include text_style_1("Conthrax", 600, 30px);
-    }
-    .initInfCont{
-        display: grid;
-        height: 77vh;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 55px;
-        div{
-            grid-column-start: 1;
-            grid-column-end: 3;
-            width: 100%;
+        .fullNameCont{
+            user-select: none;
             display: flex;
-            justify-content: end;
-
-            .updateButProf{
-                @include button_2(#D952FC,20px, 168px, 50px);
-                
-                @include text_style_1("FixelMI", 500, 22px);
+            flex-direction: column;
+            width: 100%;
+            
+            p{
+                @include text_style_1("FixelM", 400, 30px)
+            }
+            .grTxt{
+                color: #666666;
+                @include text_style_1("FixelMI", 400, 21px)
+            }
+        }
+        .shortProfSectButCont{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            button{
+                box-shadow: 0 0 9px rgba(128, 128, 128, 0.873);
+                background-color: #D952FC;
+                width: 258px;
+                height: 40px;
+                border: 1px solid white;
                 color: white;
-                box-shadow: 0 0 5px grey;
+                border-radius: 20px;
                 transition: all .2s;
+                @include text_style_1("FixelM", 400, 23px);
                 &:hover{
                     box-shadow: none;
                     transform: scale(0.97);
                 }
-
-
             }
         }
-        
-        label{
-            @include text_style_1("FixelMI", 500, 22px);
-            text-align: right;
-            color: #666666;
+    }
+    .fullUserInfCont{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .fullProfInfCont{
+            width: 100%;
+            border: 3px solid #999999;
+            border-radius: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .inforText{
+                @include text_style_1("Conthrax", 400, 35px);
+                padding-bottom: 15px;
+            }
+            .fullProfInfText{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-bottom: 40px;
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    p{
+                        color: black;
+                        @include text_style_1("FixelMI", 400, 26px);
+                    }
+                    .grTxtL{
+                        color: #666666;
+                        @include text_style_1("FixelMI", 400, 26px);
+                    }
+                }
+            }
+            .updateUserProfInfBtnCont{
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                button{
+                    box-shadow: 0 0 9px rgba(128, 128, 128, 0.873);
+                    background-color: #D952FC;
+                    width: 168px;
+                    height: 50px;
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 20px;
+                    transition: all .2s;
+                    @include text_style_1("FixelM", 400, 23px);
+                    &:hover{
+                        box-shadow: none;
+                        transform: scale(0.97);
+                    }
+                }
+            }
         }
-        p{
-            @include text_style_1("FixelMI", 500, 22px);
+        .userDocumCont{
+            width: 100%;
+            border: 3px solid #999999;
+            border-radius: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .washDocTxt{
+                @include text_style_1("Conthrax", 400, 35px);
+                padding-bottom: 15px;
+            }
+            .userDocuments{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .userDocument{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    gap:10px;
+                    .imgOfDocumCont{
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .statusOfDocumCont{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        div{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-left: 50px;
+                            .grTxt{
+                                color: #666666;
+                                @include text_style_1("FixelMI", 400, 26px);
+                            }
+                            p{
+                                @include text_style_1("FixelMI", 400, 26px);
+                            }
+                        }
+                    }
+                    .updateDocumBtnCont{
+                        display: flex;
+                        justify-content: right;
+                        align-items: end;
+                        button{
+                            box-shadow: 0 0 9px rgba(128, 128, 128, 0.873);
+                            background-color: #D952FC;
+                            width: 168px;
+                            height: 50px;
+                            border: 1px solid white;
+                            color: white;
+                            border-radius: 20px;
+                            transition: all .2s;
+                            @include text_style_1("FixelM", 400, 23px);
+                            &:hover{
+                                box-shadow: none;
+                                transform: scale(0.97);
+                            }
+                        }
+                    }
+                }
+            
+            }
+            .addDocumenBtnCont{
+                margin-top: 50px;
+                button{
+                    box-shadow: 0 0 9px rgba(128, 128, 128, 0.873);
+                    background-color: #D952FC;
+                    width: 229px;
+                    height: 60px;
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 20px;
+                    transition: all .2s;
+                    @include text_style_1("FixelM", 400, 23px);
+                    &:hover{
+                        box-shadow: none;
+                        transform: scale(0.97);
+                    } 
+
+                }
+                                
+            }
         }
-        
     }
 }

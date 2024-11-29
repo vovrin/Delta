@@ -1,0 +1,89 @@
+.adminPanelCont{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 20px;
+    p{
+        @include text_style_1("Conthrax", 400, 35px)
+    }
+    .userReqCont{
+        p{
+
+            @include text_style_1("FixelM", 400, 22px);
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        width: 100%;
+        border: 2px solid black;
+        padding-left: 10px;
+        padding-right: 10px;
+        .comButton{
+            @include button_type_1(120px, 40px, 22px);
+        }
+        .disButton{
+            @include button_type_1d(120px, 40px, 22px);
+            
+        }
+        
+        
+
+    }
+}
+.adminPanelPopupBgCont{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.511);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .adminPanelPopupCont{
+        height: 95vh;
+        width: 80vw;
+        background-color: white;
+        gap: 20px;
+        border-radius: 20px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            @include text_style_1("FixelM", 400,20px);
+            img{
+                height: 80px;
+            }
+            
+        }
+        .btnContAdmin{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: end;
+            
+            gap: 20px;
+            .confAdminn{
+                @include button_type_1(330px, 35px, 20px)
+            }
+            .cnclAdminn{
+                @include button_type_3(330px, 35px, 20px)
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+@import "../var/var";
 .swiperHomeCont{
     position: relative;
     height: 100vh;
@@ -62,18 +63,14 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        border-radius: 50px;
-        background-color: $purple-butt2;
-        color: white;
-        width: 192px;
-        font-family: 'Conthrax';
-        font-weight: 600;
-        font-size: 14px;
+      
+        @include button_type_1(192px, 30px, 50px);
+        @include text_style_1("Conthrax", 600, 14px);
+      
         text-align: left;
         padding-left: 9px;
         cursor: pointer;
-        z-index: 10;
-        box-shadow: 0 0 15px rgba(158, 155, 155, 0.855);
+       
     }
 }
 

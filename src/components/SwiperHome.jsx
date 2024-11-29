@@ -6,7 +6,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Car from "../assets/imgs/Car_exemple.jpg"
-export default function SwiperHome(){
+import { useNavigate } from 'react-router-dom';
+export default function SwiperHome({carInf}){
+  const navigate = useNavigate()
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -16,7 +18,7 @@ export default function SwiperHome(){
     return(
       <div className='wrapper swiperHomeCont'>
         <p className='ourCarsH1'>Наші автомобілі</p>
-        <button className='allCarsBtn'>Всі автомобілі</button>
+        <button className='allCarsBtn' onClick={()=>navigate("/cars")}>Всі автомобілі</button>
         <Swiper
         // install Swiper modules
           modules={[Pagination]}
@@ -25,34 +27,17 @@ export default function SwiperHome(){
           pagination={pagination}
 
         >
-          <SwiperSlide>
+          {carInf.map(val=>{
+            return<SwiperSlide>
             <div className='flex flex-col text-center'>
-              <img src={Car} alt="" />
-              <p>Car</p>
-              <p>Example</p>
+              <img src={val.bImg} alt="" />
+              <p>{val.mark}</p>
+              <p>{val.model}</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col text-center'>
-              <img src={Car} alt="" />
-              <p>Car</p>
-              <p>Example</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col text-center'>
-              <img src={Car} alt="" />
-              <p>Car</p>
-              <p>Example</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex flex-col text-center'>
-              <img src={Car} alt="" />
-              <p>Car</p>
-              <p>Example</p>
-            </div>
-          </SwiperSlide>
+          })}
+          
+          
         </Swiper>
     </div>
     )

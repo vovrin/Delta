@@ -1,8 +1,91 @@
-@import '../components/registrationForm', "../components/imgPopup", "../components/emVerPopPup";
-.regFormCont{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@import "../var/var";
+.contReg{
     width: 100%;
+    background: linear-gradient(to right,#D974F3 15%, #D995EB 20%, #D9D9D9 35%, #D995EB 85%, #D974F3 90% );
+    .regFormCont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+        form{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            
+            .polConfCont{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                p{
+                    text-align: center;
+                    max-width: 400px;
+                }
+                .polConf{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                .problemTxt{
+                    color: #FF0000;
+                    @include text_style_1("FixelR", 500, 14px)
+                }
+                p{
+                    @include text_style_1("FixelR", 500, 20px)
+                }
+            }
+            .importFileCont{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .addUserDoc{
+                    display: none;
+                }
+                .addUserDocBtn{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    height: 35px;
+                    width: 366px;
+                    border: 2px solid #D952FC;
+                    background-color: white;
+                    @include text_style_1("FixelR", 500, 20px);
+                    img{
+                        padding-left: 15px;
+                    }
+                }
+            }
+            .userName, .userSurName, .userMiddleName, .userNumOfTel, .userEmail{
+                @include reg_input_1(#D952FC, 35px, 510px);
+                @include text_style_1("FixelR", 500, 18px)
+            }
+            .userBirthDay{
+                @include reg_input_1(#D952FC, 35px, 510px);
+                padding-left: 10px;
+                padding-right: 10px;
+                @include text_style_1("FixelR", 500, 20px)
+            }
+            .nexStepRegBtnCont{
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                .nexStepRegBtn{
+                    @include button_type_1(130px, 45px, 20px);
+                    @include text_style_1("FixelR", 500, 23px)
+               }
+            }
+            
+        }
+    }
 }

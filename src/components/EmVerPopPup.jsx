@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+
 import { getAuth } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -41,7 +42,7 @@ export function EmVerPopPup(){
         <div className="emVerCont">
             <div className="emVer">
                 <p>Повідомлення з верифікацією було надіслане</p>
-                <button className="reSendEmVerBtn">Надіслати повторно</button>
+        
             </div>
         </div>,
         document.getElementById("popups")

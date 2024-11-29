@@ -1,4 +1,4 @@
-@import "../components/header", "../components/section", "../components/aboutCard", "../components/swiperHome", "../components/footerHome";
+@import "../components/header", "../components/tariffTableGen", "../components/section", "../components/aboutCard", "../components/swiperHome", "../components/footerHome", "../var/var";
 
 @font-face {
     font-family: "MariupolM";
@@ -25,9 +25,8 @@
     background-size: cover;
     .wrapper{
         p{
-            font-family: "Conthrax";
-            font-size: 50px;
-            font-weight: 600;
+            @include text_style_1("Conthrax", 600, 50px);
+            
         }
     }
     div{
@@ -45,10 +44,12 @@
             flex-direction: column;
             gap: 35px;
             li{
+                @include text_style_1("MariupolR", 400, 35px);
                 list-style-type: decimal;
-                font-family: 'MariupolN';
-                font-weight: 400;
-                font-size: 35px;
+                
+                span{
+                    @include text_style_1("Conthrax", 400, 35px);
+                }
             }
             
         }
@@ -56,87 +57,18 @@
 }
 .tarrifsCont{
     height: 100vh;
-    .tarrifs{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px 50px;
-        grid-template-rows: 100px 533px;
-        width: 100%;
-        .logoTarrifAb{
-            grid-column-start: 1;
-            grid-column-end: 4;
-            text-align: center;
-            font-family: 'Conthrax';
-            font-weight: 600;
-            font-size: 75px;
-        }
-        
-        [class$="Tarrif"]{
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 330px;
-            height: 100%;
-            box-shadow: 0 0 14px rgba(130, 130, 130, 0.782);
-            .addonsCard{
-                padding: 15px;
-                height: 100%;
-                ul{
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    li{
-                        display: flex;
-                        justify-content: space-between;
-                        font-family: "FixelTextI";
-                        font-weight: 700;
-                        font-size: 18px;
-                    }
-                }
-            }
-            [class$="Header"]{
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                height: 278px;
-                span{
-                    p{
-                        font-family: 'Poppins', sans-serif;
-                        font-weight: 600;
-                        font-size: 15px;
-                        color: white;
-                    }
-                    h1{
-                        font-family: 'Roboto';
-                        font-weight: 800;
-                        font-size: 35px;
-                        color: white;
-                    }
-                }
-                p{
-                    font-family: 'FixelTextI';
-                    font-weight: 700;
-                    font-size: 19px;
-                    color: white;
-                }
-                
-            }
-            .purpHeader{
-                background: linear-gradient(150deg,#F080FF, #E100FF);
-              
-            }
-            .pinkHeader{
-                background: linear-gradient(150deg,#FF4ECA, #C9008D);
-            }
-            .redHeader{
-                background: linear-gradient(150deg,#FF2E62, #DB083D);
-            }
+    .logoTarrifAb{
+        display: flex;
+        justify-content: center;
+        p{
+            @include text_style_1("Conthrax", 600, 75px)
         }
     }
+    
+
+        
+    
+    
 }
 
 .mapCont{
@@ -159,23 +91,14 @@
     justify-content: end;
     margin-top: 17px;
     .readMoreTarifBtn{
-        border: 2px solid #E174FF;
-        width: 436px;
-        height: 57px;
-        border-radius: 30px;
+       
         display: flex;
         align-items: center;
         justify-content: space-around;
         color: #E174FF;
-        font-family: 'Conthrax';
-        font-size: 16px;
-        transition: all .2s;
+        @include text_style_1("Conthrax",500, 16px);
         
-        box-shadow: 0 0 15px rgba(162, 156, 156, 0.918);
-        &:hover{
-            box-shadow: none;
-            transform: scale(0.97);
-    
-        }
+        @include button_type_3(436px, 57px, 30px);
+        
     }
 }

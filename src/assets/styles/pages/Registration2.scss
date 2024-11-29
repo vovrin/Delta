@@ -1,0 +1,111 @@
+@import "../var/var";
+.reg2Cont{
+    width: 100%;
+    background: linear-gradient(to right,#D974F3 15%, #D995EB 20%, #D9D9D9 35%, #D995EB 85%, #D974F3 90% );
+    .reg2FormCont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            gap: 20px;
+            label{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                .imgEyeCont{
+                    position: relative;
+                    .userPassword, .userPasswordCheck{
+                        @include reg_input_1(#D952FC, 35px, 510px);
+                        @include text_style_1("FixelR", 500, 20px);
+                    }
+                    img{
+                        position: absolute;
+                        right: 5px;
+                        top: 3px;
+                    }
+                }
+                
+                p{
+                    @include text_style_1("FixelR", 500, 20px);
+                }
+                .problemTxt{
+                    color: #FF0000;
+                    @include text_style_1("FixelR", 500, 14px);
+                }
+            }
+            .polCont{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                p{
+                    text-align: center;
+                    max-width: 300px;
+                }
+                input{
+                    width: 18px;
+                    height: 18px;
+                    accent-color: #D952FC;
+                    
+                }
+            }
+            .userFilesCont{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .openPopupFileRegBtn{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    height: 35px;
+                    width: 366px;
+                    border: 2px solid #D952FC;
+                    background-color: white;
+                    img{
+                        padding-left: 15px;
+                    }
+                }
+            }
+            .reg2ButCont{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .endRegBtn{
+                    @include text_style_1("FixelR", 500, 23px);
+                    @include button_type_2(168px, 45px, 20px);  
+                }
+                .turnBackBtn{
+                    @include text_style_1("FixelR", 500, 23px);
+                    @include button_type_3(168px, 45px, 20px)
+                }
+            }
+        }
+    }
+}
+.emVerCont{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .emVer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

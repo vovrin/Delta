@@ -25,7 +25,7 @@ export function useCheckEmVer(){
                         }else{
                             dispathc(contSlice.setAccountVerify())
                             console.log("very good");
-                            navigate("/log")
+                            navigate("/prof")
                             clearInterval(interval)
                         }
                     }, 5000)

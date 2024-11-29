@@ -1,0 +1,213 @@
+@import "../var/var", "../components/swiperTariffs", "../components/tariffTableGen", "../components/aboutAutoPopup", "../components/tarrifColGen", "../components/adminPanel";
+.carsBannerCont{
+    width: 100%;
+    height: 50vh;
+    background-image: url("../../imgs/carsBanner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        @include text_style_1("Conthrax", 600, 72px);
+        color: white;
+        user-select: none;
+    }
+    margin-bottom: 50px;
+}
+
+.carPreviewCardCont{
+    width: 367px;
+    height: 445px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.616);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    .markCont{
+        @include text_style_1("FixelSB", 400, 40px);
+    }
+    .modelCont{
+        @include text_style_1("FixelSB", 400, 30px);
+    }
+    .typeBuyCont{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        p{
+            @include text_style_1("FixelM", 400, 24px)
+        }
+        .colOf{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 10px;
+        }
+    }
+    .abAutoBtnCont{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        button{
+
+            @include text_style_1("FixelSB", 400, 22px);
+            @include button_type_1(168px, 40px, 20px);
+        }
+    }
+    
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+
+
+    .carsPreviewCardCont{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .filterCont:hover .filterList{
+        display: block;
+    }
+    .filterCont:hover .filterBtn{
+        background-color: #8e8d8d;
+    }
+    .filterCont{
+        position: relative;
+        width: 130px;
+        height: 40px;
+        .filterBtn{
+            display: flex;
+            flex-direction: row;
+            width: 130px;
+            height: 40px;
+            background-color: #BBBBBB;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            gap: 10px;
+            @include text_style_1("FixelR", 200, 18px)
+        }
+        .filterList{
+            display: none;
+            background-color:white;
+            color: black;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 196px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.556);
+            ul{
+                display: block;
+                .tarrifsFilterBtn:hover .tarrifsFilterCont{
+                    display: block;
+                }
+                
+                .markFilterBtn:hover .markFilterCont{
+                    display: block;
+                }
+                .markFilterCont{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 196px;
+                    background-color: white;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.556);
+                    width: 196px;
+                    ul{
+                        
+                        width: 100%;
+                      li{
+                        width: 100%;
+                        padding: 6px;
+                        display: flex;
+                        flex-direction: row;
+                        }
+                    }
+                    
+                }
+                li{
+                    padding: 6px;
+                    cursor: pointer;
+                    position: relative;
+                    .tarrifsFilterCont{
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 196px;
+                        background-color: white;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.556);
+                        ul{
+                            li{
+                                display: flex;
+                                flex-direction: row;
+                                padding: 6px;
+                                align-items: center;
+                                gap: 7px;
+                                .ekCol{
+                                    border-radius: 5px;
+                                    height: 20px;
+                                    width: 20px;
+                                    background: linear-gradient(#F18FFE,#E100FF);
+                                    
+                                }
+                                .stCol{
+                                    border-radius: 5px;
+                                    height: 20px;
+                                    width: 20px;
+                                    background: linear-gradient(#FF4ECA,#C9008D);
+                                    
+                                }
+                                .coCol{
+                                    border-radius: 5px;
+                                    height: 20px;
+                                    width: 20px;
+                                    background: linear-gradient(#FF2E62,#DB083D);
+                                    
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        background-color: grey;
+                    }
+                }
+            }
+        }
+    }
+}
+.alertConfirmOrderCont{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    div{
+        width: 100%;
+        text-align: center;
+        p{
+
+            @include text_style_1("Conthrax", 400, 34px);
+        }
+    }
+    p{
+        @include text_style_1("FixelR", 400, 25px);
+    }
+}

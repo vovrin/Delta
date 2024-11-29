@@ -1,14 +1,14 @@
 @import "../var/var";
 header{
     width: 100%;
-    
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     left: 0;
-    @include text_style_1("MariupolM", 400, 19px);
+    @include text_style_1("MariupolR", 400, 19px);
     color: #000;
     background-color: white;
     z-index: 100;
@@ -36,9 +36,59 @@ header{
             width: 60%;
             height: 100%;
             .navSSect{
+                position: relative;
+    
+                    .signInShowBtn{
+                        height: 70px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        &:hover{
+                            background-color: #00000083;
+                        }
+                    }
+                
+                .menuProf{
+                    width: 100%;
+                    
+                
+                    
+                    position: absolute;
+                    bottom: -139px;
+                    left: 0;
+                    
+                    
+                    ul{
+                        background-color:#EBEAEA;
+                        align-items: center;
+                        justify-content: space-around;
+                        height: 139px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        li{
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            margin: 4px;
+                            
+                            button{
+                                
+                                width: 100%;
+                                height: 100%;
+                                align-items: center;
+                                background-color:#D9D9D9;
+                                &:hover{
+                                    background-color: grey;
+                                }
+                            }
+                        }
+                    }
+                }
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
                 .imgLink{
                     display: flex;
                     flex-direction: row;
@@ -53,6 +103,7 @@ header{
                     border-radius: 100%;
                     height: 35px;
                     width: 35px;
+                    
                     }
                     .textProfImg{
                         width: 35px;
@@ -95,9 +146,55 @@ header{
                             background-color: #00000083;
                         }
                     }
+                   
                 }
             }
             
+        }
+    }
+    
+}
+.contSignInPop:hover .signInPopPupCont{
+    display: flex;
+}
+.signInPopPupCont{
+    position: absolute;
+    background-color: white;
+    
+    flex-direction: column;
+    width: 281px;
+    padding: 15px;
+    gap: 10px;
+    align-items: center;
+    display: none;
+    button{
+        @include button_type_1(201px, 54px, 20px)
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        label{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            gap: 10px;
+            input{
+                padding-left: 10px;
+                outline: none;
+                width: 170px;
+                height: 34px;
+                background-color: #C8C7C7;
+                border: 2px solid #D952FC;
+            }
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            button{
+                @include button_type_1(127px, 30px ,20px)
+            }
         }
     }
     
